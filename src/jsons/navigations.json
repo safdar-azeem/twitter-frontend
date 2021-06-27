@@ -1,0 +1,37 @@
+[
+   {
+      "title": "Home",
+      "url": "/",
+      "icon": "fa-solid fa-house",
+      "active_icon": "fa-solid fa-house",
+      "hideOnMd": false
+   },
+   {
+      "title": "Explore",
+      "url": "/explore",
+      "icon": "fa-solid fa-magnifying-glass",
+      "active_icon": "fa-solid fa-magnifying-glass ",
+      "hideOnMd": false
+   },
+   {
+      "title": "Notifications",
+      "url": "/notifications",
+      "icon": "fa-regular fa-bell",
+      "active_icon": "fa-solid fa-bell",
+      "hideOnMd": false
+   },
+   {
+      "title": "Bookmarks",
+      "url": "/bookmarks",
+      "icon": "fa-regular fa-bookmark",
+      "active_icon": "fa-solid fa-bookmark",
+      "hideOnMd": true
+   },
+   {
+      "title": "Profile",
+      "url": "/profile",
+      "icon": "fa-regular fa-user",
+      "active_icon": "fa-solid fa-user",
+      "hideOnMd": true
+   }
+]
