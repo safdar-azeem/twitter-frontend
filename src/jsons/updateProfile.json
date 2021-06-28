@@ -1,0 +1,26 @@
+[
+   {
+      "name": "name",
+      "value": "",
+      "type": "text",
+      "placeholder": "Name"
+   },
+   {
+      "name": "location",
+      "value": "",
+      "type": "text",
+      "placeholder": "Location"
+   },
+   {
+      "name": "website",
+      "value": "",
+      "type": "text",
+      "placeholder": "Website"
+   },
+   {
+      "name": "bio",
+      "value": "",
+      "type": "textarea",
+      "placeholder": "Bio"
+   }
+]
