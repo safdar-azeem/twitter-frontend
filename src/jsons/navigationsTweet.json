@@ -1,0 +1,14 @@
+[
+   {
+      "title": "Tweets",
+      "url": "/profile/:id"
+   },
+   {
+      "title": "Media",
+      "url": "/profile/:id/media"
+   },
+   {
+      "title": "Likes",
+      "url": "/profile/:id/likes"
+   }
+]
