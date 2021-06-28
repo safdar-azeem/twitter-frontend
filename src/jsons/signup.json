@@ -1,0 +1,34 @@
+[
+   {
+      "name": "name",
+      "value": "",
+      "type": "text",
+      "placeholder": "Name",
+      "required": true,
+      "error": "Please enter your name"
+   },
+   {
+      "name": "email",
+      "value": "",
+      "type": "email",
+      "placeholder": "Email address",
+      "required": true,
+      "error": "Please enter a valid email address"
+   },
+   {
+      "name": "password",
+      "value": "",
+      "type": "password",
+      "placeholder": "Password",
+      "required": true,
+      "error": "Please enter a password"
+   },
+   {
+      "name": "confirmPassword",
+      "value": "",
+      "type": "password",
+      "placeholder": "Confirm Password",
+      "required": true,
+      "error": "Please confirm your password"
+   }
+]
