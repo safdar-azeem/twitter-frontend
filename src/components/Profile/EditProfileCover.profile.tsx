@@ -13,13 +13,15 @@ const EditProfileCover = ({ handleAvatar, user }: Iprops) => {
    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, state: 'avatar' | 'cover') => {
       if (!e.target.files) return
       const file = e.target.files[0]
-      handleAvatar({
-         state,
-         file,
-      })
+
       const reader = new FileReader()
       reader.readAsDataURL(file)
       reader.onload = () => {
+         handleAvatar({
+            state,
+            file: reader.result,
+         })
+
          if (state === 'avatar') {
             setSelectedAvatar(reader.result as string)
          } else if (state === 'cover') {
