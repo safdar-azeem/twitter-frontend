@@ -15,7 +15,7 @@ const TweetDetails = ({ tweet }: Iprops) => {
                <img
                   src={tweet.photo}
                   className="w-100 object-contain bg-secondary  rounded mt-1"
-                  style={{ maxHeight: '500px' }}
+                  style={{ maxHeight: '500px', minHeight: '250px' }}
                   alt=""
                />
             )}
