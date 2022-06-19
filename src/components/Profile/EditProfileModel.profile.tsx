@@ -23,8 +23,8 @@ export interface IDateOfBirth {
 }
 
 const EditProfileModel = ({ user, handleClose, show }: Iprops) => {
-   const [avatar, setAvatar] = useState<File | null>(null)
-   const [cover, setCover] = useState<File | null>(null)
+   const [avatar, setAvatar] = useState<string>('')
+   const [cover, setCover] = useState<string>('')
    const [uploadPhoto, { isLoading: uploadLoading }] = useUplaodPhotoMutation()
 
    const [updateUser, { data, isLoading }] = useUpdateUserMutation()
@@ -71,13 +71,13 @@ const EditProfileModel = ({ user, handleClose, show }: Iprops) => {
       if (avatar) {
          const photoData: any = await uploadPhoto(avatar)
          photoData && (data.avatar = photoData?.data.src as string)
-         setAvatar(null)
+         setAvatar('')
       }
 
       if (cover) {
          const photoData: any = await uploadPhoto(cover)
          photoData && (data.cover = photoData?.data.src as string)
-         setCover(null)
+         setCover('')
       }
 
       updateUser(data)
