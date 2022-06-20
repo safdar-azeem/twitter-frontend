@@ -59,8 +59,8 @@ const TweetCreate = () => {
             is_Public: isPublic,
          }
 
-         if (imageForUpload) {
-            const photoData: any = await uploadPhoto(imageForUpload)
+         if (readableImage) {
+            const photoData: any = await uploadPhoto(readableImage)
             photoData && (formData.photo = photoData?.data.src as string)
          }
 
