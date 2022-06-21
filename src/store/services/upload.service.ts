@@ -24,10 +24,11 @@ const TrendsApi = createApi({
    }),
    tagTypes: ['Trends'],
    endpoints: (builder) => ({
-      uplaodPhoto: builder.mutation<ApiResponse<'src', string>, any>({
+      uplaodPhoto: builder.mutation<ApiResponse<'src', string>, string>({
          query: (image) => {
-            const body = new FormData()
-            body.append('image', image)
+            const body = {
+               base64Image: image,
+            }
             return {
                url: `/upload/photo`,
                method: 'POST',
