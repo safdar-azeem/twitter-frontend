@@ -1,17 +1,15 @@
 import React from 'react'
 import Cookies from 'js-cookie'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
 import { IForm } from '../../types/form.type'
 import loginJson from '../../jsons/login.json'
-import { Link, useNavigate } from 'react-router-dom'
 import Spinner from '../../components/reusable/Spinner'
-import { useLazyMeQuery, useLoginMutation } from '../../store/services/auth.services'
+import { useLoginMutation } from '../../store/services/auth.services'
 
 const Login = () => {
-   const navigate = useNavigate()
    const [loginAction, loginResult] = useLoginMutation()
-   const [getMe, meResult] = useLazyMeQuery()
 
    const { form, handleChange, doValidate } = useForm(loginJson)
 
@@ -29,14 +27,9 @@ const Login = () => {
       if (data) {
          Cookies.set('token', data.token)
          toast.success('Login Successful')
-         getMe()
-         navigate('/')
+         window.location.reload()
       }
    }, [loginResult])
-
-   React.useEffect(() => {
-      console.log(meResult)
-   }, [meResult])
 
    return (
       <div>
